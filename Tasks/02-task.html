@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 02</title>
+</head>
+
+<body>
+    <p>Радиус:</p>
+    <input type="text" id="r">
+    <p>Высота</p>
+    <input type="text" id="h">
+
+    <button id="but" onclick="aao()">вывод</button>
+
+    <p id="unser">asd</p>
+
+    <style>
+        button
+        {
+            display: block;
+            margin: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: #1b7400;
+            color: aliceblue;
+            font-size: 16px;
+            transition: all ease-in 0.2s;
+        }
+        button:hover
+        {
+            background: #176100;
+            padding: 15px 25px;
+            margin: 15px;
+            border-radius: 0px;
+        }
+
+        p
+        {
+            margin: 0;
+            margin-top: 15px;
+        }
+        #unser
+        {
+            margin: 30px;
+            font-size: 30px;
+            display: none;
+        }
+    </style>
+    
+    <script>
+        /*
+        Задание:
+        Напишите сценарий, который вычисляет объем цилиндра по параметрам, которые вводит пользователь.
+        Для расчета используйте формулу - V=π * r в квадрате * h
+        Разместите на странице два поля ввода - первое для радиуса цилиндра, второе для высоты цилиндра.
+        Объем цилиндра выведите в тело страницы.
+        */
+
+        function aao()
+        {
+            const r = document.getElementById("r").value;
+            const h = document.getElementById("h").value;
+
+            const result = (3.141592 * r**2 * h);
+
+            document.getElementById("unser").innerText = result;
+            document.getElementById("unser").style.display = "block";
+
+        }
+
+    </script>
+</body>
+
+</html>
